@@ -294,6 +294,8 @@ int main(int argc, char **argv)
 
 	Nob_Cmd cmd = {0};
 	nob_da_append_many(&cmd, argv + 2, argc - 2);
+
+	// FIXME: we should not carry about awaiting for the process to finish
 	if (!nob_cmd_run_sync(cmd, buffer)) return 1;
 
 	// NOTE: the program is about to close, let the OS free the memory itself!

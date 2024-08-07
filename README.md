@@ -13,7 +13,7 @@
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/drocha/withenv.git
+git clone https://github.com/drocha87/withenv
 ```
 
 2. Navigate to the project directory:

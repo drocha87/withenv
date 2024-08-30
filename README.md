@@ -25,7 +25,8 @@ cd withenv
 3. Compile the program:
 
 ```sh
-make
+cc nob.c -o nob
+nob
 ```
 
 ## Usage

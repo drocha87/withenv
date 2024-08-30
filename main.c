@@ -13,12 +13,12 @@
 #include "./nob.h"
 
 void usage(void) {
-    printf("Usage: withenv env_file command [args...]\n");
-    printf("\n");
-    printf("  env_file   Path to the environment file containing key=value pairs\n");
-    printf("  command    The command to be executed with the specified environment variables\n");
-    printf("  args...    Arguments to be passed to the command\n");
-    printf("\n");
+  printf("Usage: withenv env_file command [args...]\n");
+  printf("\n");
+  printf("  env_file   Path to the environment file containing key=value pairs\n");
+  printf("  command    The command to be executed with the specified environment variables\n");
+  printf("  args...    Arguments to be passed to the command\n");
+  printf("\n");
 }
 
 int main(int argc, char **argv)
@@ -85,6 +85,8 @@ int main(int argc, char **argv)
 
     memcpy(temp_value, value.data, value.count);
     temp_value[value.count] = '\0';
+
+    // TODO: check if the temp_value starts with quote/double quote and report it as it could be a mistake
 
     setenv(temp_key, temp_value, 1);
   }
